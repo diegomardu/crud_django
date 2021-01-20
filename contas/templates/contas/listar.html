@@ -12,6 +12,6 @@
             <li> <a href="{% url 'atualizar' transacao.id %}">{{ transacao.descricao }}, {{ transacao.categoria }},{{ transacao.valor }}</a></li>
         {% endfor %}
     </ul>
-    <a href="{% url 'nova' %}">Novo</a>
+    <a href="{% url 'nova' %}"> <button>Novo</button></a>
 </body>
 </html>
