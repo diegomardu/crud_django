@@ -9,8 +9,9 @@
     <h2>Todas despesas</h2>
     <ul>
         {% for transacao in transacoes %}
-            <li>{{ transacao }}, {{ transacao.categoria }},{{ transacao.valor }}</li>
+            <li> <a href="{% url 'atualizar' transacao.id %}">{{ transacao.descricao }}, {{ transacao.categoria }},{{ transacao.valor }}</a></li>
         {% endfor %}
     </ul>
+    <a href="{% url 'nova' %}">Novo</a>
 </body>
 </html>

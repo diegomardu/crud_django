@@ -18,4 +18,18 @@ def nova_despesa(request):
         return redirect('listar')
     return render(request, 'contas/form.html', {'form':form})
 
+def atualizar(request,pk):
+    transacao = Transacao.objects.get(pk=pk)
+    form = TransacaoForm(request.POST or None, instance=transacao)
+
+    if form.is_valid():
+        form.save()
+        return redirect('listar')
+    return render(request, 'contas/form.html', {'form':form, 'transacao':transacao})
+
+def deletar(request, pk):
+    transacao = Transacao.objects.get(pk=pk)
+    transacao.delete()
+    return redirect('listar')
+
     
