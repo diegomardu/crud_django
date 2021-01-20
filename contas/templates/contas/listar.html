@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transaçoes</title>
+    <title>Despesas</title>
 </head>
 <body>
-    <h2>Todas Transaçoes</h2>
+    <h2>Todas despesas</h2>
     <ul>
-        {% for transacao in transaçoes %}
-        <li>{{ transacao }}</li>
-
+        {% for transacao in transacoes %}
+            <li>{{ transacao }}, {{ transacao.categoria }},{{ transacao.valor }}</li>
         {% endfor %}
     </ul>
 </body>
