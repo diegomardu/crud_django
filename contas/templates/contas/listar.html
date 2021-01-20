@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaçoes</title>
+</head>
+<body>
+    <h2>Todas Transaçoes</h2>
+    <ul>
+        {% for transacao in transaçoes %}
+        <li>{{ transacao }}</li>
+
+        {% endfor %}
+    </ul>
+</body>
+</html>
